@@ -7,8 +7,9 @@ services:
       - ./repairhub-api/.env
     environment:
       DATABASE_URL: sqlite:////app/data/db.sqlite3
-      CORS_ALLOWED_ORIGINS: http://localhost:8080
-      FRONTEND_APP_URL: http://localhost:8080
+      ALLOWED_HOSTS: "*"
+      CORS_ALLOW_ALL_ORIGINS: "True"
+      FRONTEND_APP_URL: "*"
     ports:
       - "8000:8000"
     restart: unless-stopped
